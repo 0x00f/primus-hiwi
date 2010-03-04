@@ -28,3 +28,4 @@ Add your content here.  Format your content with:
 || NATIONAL SEMI LMH6609MA, WIDEBAND, SINGLE ENDEDVOLTAGE FEEDB AMP || 8180733  || 2 || €6,66 ||
 || HAMAMATSU - S5972 - PHOTODIODE, 800NM, 500MHZ  || 1495573  || 1 || €7,00  ||
 || L7812ABV - V REG +12V, 7812, TO220-3  || 1087090  || 1 || €0,30  ||
+|| TI OP656,OP AMP, LOW OFFSET, SMD, SOIC8 || 0  || 1 || €0  ||
