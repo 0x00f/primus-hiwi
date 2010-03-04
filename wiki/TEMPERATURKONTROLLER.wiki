@@ -14,6 +14,4 @@ Add your content here.  Format your content with:
 
 = Layouts =
 
-[http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Btop-copper%5D.pdf Top Copper Layout]
-
-[http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Bbottom-copper%5D.pdf Bottom Copper Layout]
+[http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Btop-copper%5D.pdf Top Copper Layout]  ,  [http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Bbottom-copper%5D.pdf Bottom Copper Layout]
