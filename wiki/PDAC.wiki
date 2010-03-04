@@ -14,7 +14,6 @@ Add your content here.  Format your content with:
 
 || *Komponent* || *Farnell #* || *Menge* || *Kosten* ||
 || VISHAY DRALORIC RESISTOR, 0603, 10KR , 1% || 1469748  || 50 || €1,50 ||
-|| 1910 || -15 || 30 ||
-|| 1920 || -10 || 32 ||
-|| 1930 || _N/A_ || _N/A_ ||
-|| 1940 || -2 || 40 ||
+|| VISHAY DRALORIC RESISTOR, 0603, 1KR , 1% || 1469740  || 50 || €1,50 ||
+|| VISHAY DRALORIC RESISTOR, 0603, 100KR , 1% || 1469649  || 50 || €1,50 ||
+|| VISHAY DRALORIC RESISTOR, 0603, 100R , 1% || 1469752  || 50 || €1,50 ||
