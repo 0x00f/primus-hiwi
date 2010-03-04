@@ -12,7 +12,7 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-|| *Year* || *Temperature (low)* || *Temperature (high)* ||
+|| *Komponent* || *Farnell #* || *Menge* || *Kosten* ||
 || 1900 || -10 || 25 ||
 || 1910 || -15 || 30 ||
 || 1920 || -10 || 32 ||
