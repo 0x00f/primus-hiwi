@@ -5,10 +5,8 @@
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Bei der aufgebaute Schaltung entfallt der 7812 und den OP27, und die Schaltung wird direkt uber +6/GND/-6[V] versorgt.  D3-5, C4, C7, C9, R5 und R11 sind daher nicht mehr benotigt.  Die Dioden pads werden kurzgeschlossen, und VIA brucken weren in Pin 1 des 7812, und beiden Pins von C9 gelotet.
+
 = Parts List =
 || *Komponent* || *Farnell #* || *Menge* || *Kosten* ||
 || VISHAY DRALORIC RESISTOR, 0603, 10KR , 1% || 1469748  || 50 || €1,50 ||
