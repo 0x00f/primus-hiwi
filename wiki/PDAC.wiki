@@ -10,7 +10,7 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
+= Parts List =
 || *Komponent* || *Farnell #* || *Menge* || *Kosten* ||
 || VISHAY DRALORIC RESISTOR, 0603, 10KR , 1% || 1469748  || 50 || €1,50 ||
 || VISHAY DRALORIC RESISTOR, 0603, 1KR , 1% || 1469740  || 50 || €1,50 ||
