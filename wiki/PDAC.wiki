@@ -1,8 +1,7 @@
 #summary High Frequency Photodetector
 = PD-AC Detektor =
 
-Add your content here.
-
+30MHz+ Photodioden Verstarker.
 
 = Details =
 
