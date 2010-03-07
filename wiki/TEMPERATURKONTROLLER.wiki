@@ -13,6 +13,8 @@ Add your content here.  Format your content with:
   * Automatic links to other wiki pages
 
 = Layouts =
-[http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Btop-copper%5D.pdf Top Copper Layout[V2]]  ,  [http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Bbottom-copper%5D.pdf Bottom Copper Layout[V2]]
+[http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Btop-copper%5D.pdf Top Copper Layout[V2]]  ,  [http://primus-hiwi.googlecode.com/files/Temp-Kontr.V2%5Bbottom-copper%5D.pdf Bottom Copper Layout[V2]] - Deprecated!
+
+[http://primus-hiwi.googlecode.com/files/bottom-copper%5BTempKontrV4%5D.pdf Bottom Copper Layout[V4] , 
 
 = Gerber Files =
