@@ -3,7 +3,8 @@
 = Introduction =
 
 Add your content here.
-http://code.google.com/p/primus-hiwi/source/browse/trunk/Laser-ext-setpoint/setpointV1%5B15.01.10%5D/V1-bottom.JPG
+
+[http://code.google.com/p/primus-hiwi/source/browse/trunk/Laser-ext-setpoint/setpointV1%5B15.01.10%5D/V1-bottom.JPG]
 
 = Details =
 
