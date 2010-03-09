@@ -1,0 +1,17 @@
+#summary Kompakter Laserdioden Anschlussplatine
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= Gerbers and Layouts =
+
+[http://primus-hiwi.googlecode.com/files/LaseranschlussV3.zip LaseranschlussV3 Layouts and Gerbers]
