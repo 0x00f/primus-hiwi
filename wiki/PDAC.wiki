@@ -9,7 +9,7 @@ Bei der aufgebaute Schaltung entfallt der 7812 und der U6 OP, die Schaltung wird
 
 = Gerbers, Schematics and Layouts =
 
-[http://primus-hiwi.googlecode.com/files/pd-ac_v2.zip pd-acV2]
+[http://primus-hiwi.googlecode.com/files/pd-ac_v2.zip pd-ac[V2]]
 
 
 = Parts List =
