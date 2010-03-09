@@ -14,4 +14,4 @@ Add your content here.  Format your content with:
 
 = Gerbers and Layouts =
 
-[http://primus-hiwi.googlecode.com/files/LaseranschlussV3.zip LaseranschlussV3 Layouts and Gerbers]
+[http://primus-hiwi.googlecode.com/files/LaseranschlussV3.zip Laseranschluss Layouts and Gerbers[V3]]
