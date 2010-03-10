@@ -16,4 +16,4 @@ Add your content here.  Format your content with:
 
 [http://primus-hiwi.googlecode.com/files/LaseranschlussV3.zip Laseranschluss Layouts and Gerbers[V3]]
 
-[http://code.google.com/p/primus-hiwi/source/browse/trunk/Laseranschluss/GERBERS/LeftLaserV3/LeftLaserPanelTop%5BV3%5D.pdf Panelized Layout (x3) of Left Laser [V3]]
+[https://primus-hiwi.googlecode.com/svn/trunk/Laseranschluss/GERBERS/LeftLaserV3/panel/LeftLaserPanel%5BV3%5D.rar Panelized Layout (x3) of Left Laser [V3]]
