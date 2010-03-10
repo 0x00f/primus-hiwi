@@ -15,3 +15,5 @@ Add your content here.  Format your content with:
 = Gerbers and Layouts =
 
 [http://primus-hiwi.googlecode.com/files/LaseranschlussV3.zip Laseranschluss Layouts and Gerbers[V3]]
+
+[http://code.google.com/p/primus-hiwi/source/browse/trunk/Laseranschluss/GERBERS/LeftLaserV3/LeftLaserPanelTop%5BV3%5D.pdf Panelized Layout (x3) of Left Laser [V3]]
