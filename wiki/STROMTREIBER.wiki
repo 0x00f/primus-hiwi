@@ -4,7 +4,7 @@
 
 Add your content here.
 
-<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="350" height="250">
+<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="350" height="250" align="center">
 
 
 = Details =
