@@ -16,4 +16,4 @@ Add your content here.  Format your content with:
 
 [http://primus-hiwi.googlecode.com/files/ext-setpoint-schematic.jpg Original Traced Schematic as JPEG] - Deprecated, for reference purposes only
 
-[http://primus-hiwi.googlecode.com/files/external-setpointPANEL%5BV1%5D.rar Panelized (x3) Layouts]
+[http://primus-hiwi.googlecode.com/files/external-setpointPANEL%5BV1%5D.rar Panelized (x3) Layouts] - A layout combining 3 circuit layouts into a 160mmx100mm Eurocard PCB
