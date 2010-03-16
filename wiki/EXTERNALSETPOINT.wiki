@@ -15,4 +15,5 @@ Add your content here.  Format your content with:
 = Layouts, GERBERS and Schematic Files =
 
 [http://primus-hiwi.googlecode.com/files/ext-setpoint-schematic.jpg Original Traced Schematic as JPEG] - Deprecated, for reference purposes only
+
 [http://primus-hiwi.googlecode.com/files/external-setpointPANEL%5BV1%5D.rar Panelized (x3) Layouts]
