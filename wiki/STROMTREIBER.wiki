@@ -2,7 +2,7 @@
 
 = Introduction =
 
-<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="350" height="250" align="middle">
+<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="450" height="350" align="middle">
 
 Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti oder über externen [EXTERNALSETPOINT] einstellbar ist
 = Details =
