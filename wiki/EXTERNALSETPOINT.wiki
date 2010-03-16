@@ -14,4 +14,4 @@ Add your content here.  Format your content with:
 
 = Layouts, GERBERS and Schematic Files =
 
-<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-schematic.jpg" width="450" height="350" align="middle">
+[http://primus-hiwi.googlecode.com/files/ext-setpoint-schematic.jpg Original Traced Schematic as JPEG]
