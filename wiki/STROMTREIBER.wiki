@@ -3,7 +3,8 @@
 = Introduction =
 
 Add your content here.
-[http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG <width="200">]
+
+[http://code.google.com/p/primus-hiwi/w/STROMTREIBER http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG <width="200">]
 
 = Details =
 
