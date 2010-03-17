@@ -13,4 +13,4 @@ Add your content here.  Format your content with:
 
 = GERBERS, Layouts ... =
 
-[http://primus-hiwi.googlecode.com/files/Laser-Treiber%5BV5%5D.zip Laser-Treiber[V5] Layouts (jetzt externer setpoint platine bereit)]
+[http://primus-hiwi.googlecode.com/files/Laser-Treiber%5BV5%5D.zip Laser-Treiber(V5) Layouts (jetzt externer setpoint platine bereit)]
