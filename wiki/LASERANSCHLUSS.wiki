@@ -20,4 +20,4 @@ Add your content here.  Format your content with:
 
 [http://primus-hiwi.googlecode.com/files/RightLaserPanelTOP%5BV3%5D.pdf Panelized Layout (x3) of Right Laser TOP[V3]] , [http://primus-hiwi.googlecode.com/files/RightLaserPanelBOTTOM%5BV3%5D.pdf Panelized Layout (x3) of Right Laser BOTTOM[V3]] - Deprecated
 
-[http://primus-hiwi.googlecode.com/files/LaseranschlussPanel%5BV4%5D.zip Left and Right Laseranschluss [V4] in panel (x3) layout ] 
+[http://primus-hiwi.googlecode.com/files/LaseranschlussPanel%5BV4%5D.zip Left and Right Laseranschluss panel (x3) layout[V4]] 
