@@ -1,4 +1,4 @@
-#summary Temperature Controller to regulate a Peltier Element up to 2A
+#summary Temperature Controller to regulate a Peltier Element with up to 2,5A of Heating/Cooling current.  Feedback is obtained through a NTC Thermistor, which the IC feeds through a PI Control Loop to regulate the temperature.
 
 = Introduction =
 
