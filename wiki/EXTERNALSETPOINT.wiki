@@ -3,9 +3,14 @@
 = Introduction =
 
 Add your content here.
-http://primus-hiwi.googlecode.com/files/V1-top.jpg
+
+
 
 = Details =
+
+<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-circuit.JPG" width="450" height="350" align="left">
+
+<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-sim.JPG" width="450" height="350" align="right">
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
