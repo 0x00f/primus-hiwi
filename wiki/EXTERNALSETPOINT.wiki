@@ -4,13 +4,11 @@
 
 Add your content here.
 
-
-
 = Details =
 
-<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-circuit.JPG" width="450" height="350" align="left">
+<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-circuit.JPG" width="650" height="550" align="middle">
 
-<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-sim.JPG" width="450" height="350" align="right">
+<img src="http://primus-hiwi.googlecode.com/files/ext-setpoint-sim.JPG" width="450" height="350" align="middle">
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
