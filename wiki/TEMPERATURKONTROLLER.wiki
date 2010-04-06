@@ -7,7 +7,7 @@ Temperature Controller to regulate a Peltier Element with up to 2,5A of Heating/
 
 = Details =
 
-<img src="http://primus-hiwi.googlecode.com/files/2010-04-06%2012.35.06.jpg" width="550" height="450" align="middle">
+<img src="http://primus-hiwi.googlecode.com/files/2010-04-06%2012.35.06.jpg" width="650" height="550" align="middle">
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
