@@ -7,6 +7,8 @@ Add your content here.
 
 = Details =
 
+<img src="http://primus-hiwi.googlecode.com/files/2010-04-06%2012.37.22.jpg" width="650" height="510" align="middle">
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
