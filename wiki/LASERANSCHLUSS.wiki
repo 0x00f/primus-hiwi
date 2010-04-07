@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Eine einfache und kleine Anschlussplatine über der eine Laserdiode mit Strom versogt, und mit ein Signal moduliert werden kann.  Enthält eine Schutz Diode und ermöglicht auserdem das ein und ausschalten der diode über einen normalen Toggle Schalter.
+Eine einfache und kleine Anschlussplatine über der eine Laserdiode mit Strom versorgt, und mit ein Signal moduliert werden kann.  Enthält eine Schutz Diode und ermöglicht auserdem das ein und ausschalten der diode über einen normalen Toggle Schalter.
 
 
 = Details =
