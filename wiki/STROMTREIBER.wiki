@@ -2,7 +2,7 @@
 
 = Introduction = 
 
-Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti und zusätzlich über externen [EXTERNALSETPOINT] einstellbar ist.
+Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti und zusätzlich über externen [EXTERNALSETPOINT] einstellbar ist.  Eine LM399H Präzision Referenz (6,95V) wird über ein Multiturn-Poti geteilt.  Diese Spannung wird in ein OP geleitet, dessen Ausgang zum Gate eines FET Transistors verbunden ist.  Ein Prazisions Widerstand ist am FET angeschlossen, und generiert ein sehr genauer und stabiler Strom, das die Laser Diode ansteuert.  
 
 = Details =
 
