@@ -2,12 +2,13 @@
 
 = Introduction =
 
-Add your content here.
+Eine einfache und kleine Anschlussplatine über der eine Laserdiode mit Strom versogt, und mit ein Signal moduliert werden kann.  Enthält eine Schutz Diode und ermöglicht auserdem das ein und ausschalten der diode über einen normalen Toggle Schalter.
 
 
 = Details =
 
 <img src="http://primus-hiwi.googlecode.com/files/2010-04-06%2012.37.22.jpg" width="650" height="510" align="middle">
+Eine erstes Prototype. 
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
