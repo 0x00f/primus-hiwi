@@ -1,10 +1,12 @@
 #summary Sehr stabiler Laser Dioden Strom Treiber
 
 = Introduction = 
-<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="450" height="350" align="middle">
 
 Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti oder über externen [EXTERNALSETPOINT] einstellbar ist
+
 = Details =
+
+<img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="450" height="350" align="middle">
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
