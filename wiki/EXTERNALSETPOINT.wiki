@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This circuit allows external fine tuning of the Stromtreiber circuit.  A 10V differential Voltage at the input results in a +1V addition to the internal setpoint (Gain of 0.1), which is set by the potentiometer of the Stromtreiber.  When no external control is required, the differential amplifier is disconnected (with a toggle switch) and only the Internal Setpoint voltage is output.
+This circuit allows external fine tuning of the Stromtreiber circuit.  A 10V differential Voltage at the input results in a +1V addition to the internal setpoint (Gain of 0.1).  When no external control is required, the differential amplifier is disconnected (with a toggle switch) and only the Internal Setpoint voltage is output(Gain of 1).
 
 = Details =
 
