@@ -5,6 +5,8 @@
 
 = Details =
 
+<img src="http://primus-hiwi.googlecode.com/files/pd-ac.jpg" width="650" height="510" align="middle">
+
 Bei der aufgebaute Schaltung entfallt der 7812 und der U6 OP, die Schaltung wird direkt uber +6V/GND/-6V versorgt.  D3-5, C4, C7, C9, {{{R5}}} und {{{R11}}} sind daher nicht mehr benotigt.  Die Dioden pads werden kurzgeschlossen, und VIA brucken werden in Pin 1 des 7812, und beiden Pins von C9 gelotet.
 
 = Gerbers, Schematics and Layouts =
