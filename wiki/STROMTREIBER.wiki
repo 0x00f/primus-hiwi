@@ -2,7 +2,7 @@
 
 = Introduction = 
 
-Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti oder über externen [EXTERNALSETPOINT] einstellbar ist
+Ein sehr stabiler Laser Dioden Strom Treiber, der Intern per Poti und zusätzlich über externen [EXTERNALSETPOINT] einstellbar ist.
 
 = Details =
 
