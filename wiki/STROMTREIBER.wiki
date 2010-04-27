@@ -9,6 +9,7 @@ Eine LM399H Präzision Referenz (6,95V) wird über ein Multiturn-Poti geteilt. (
 = Details =
 
 <img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="450" height="350" align="left"> 
+
 <img src="http://primus-hiwi.googlecode.com/files/StromTreiberV5.jpg" width="450" height="350" align="right">
 
 
