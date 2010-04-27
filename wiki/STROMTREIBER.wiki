@@ -19,6 +19,27 @@ PCB Version 4 without External Setpoint
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 PCB Version 5 with External Setpoint
 
 <img src="http://primus-hiwi.googlecode.com/files/StromTreiberV5.jpg" width="550" height="450" align="left">
