@@ -12,6 +12,13 @@ PCB Version 4 without External Setpoint
 
 <img src="http://primus-hiwi.googlecode.com/files/laser-treiber%5BV1%5D.JPG" width="550" height="450" align="left"> 
 
+
+
+
+
+
+
+
 PCB Version 5 with External Setpoint
 
 <img src="http://primus-hiwi.googlecode.com/files/StromTreiberV5.jpg" width="550" height="450" align="left">
