@@ -1,4 +1,4 @@
-Voltage and Current regulator circuit to power a 1.2W Heater Pad
+#summary Voltage and Current regulator circuit to power a 1.2W Heater Pad
 
 = Introduction =
 
