@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Voltage and Current regulator circuit to power a 1.2W Heater Pad
 
 = Introduction =
 
