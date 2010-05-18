@@ -11,7 +11,7 @@ Example usage of a JFET as a Voltage Controlled Resistor to control regulator ou
 
 [http://primus-hiwi.googlecode.com/files/JFET-App_Notes.pdf Application Note with various circuit examples of Jfet uses, including VCR]
 
-[http://primus-hiwi.googlecode.com/files/JFET-app2.pdf]
+[http://primus-hiwi.googlecode.com/files/JFET-app2.pdf Very detailed info on VCR usage and characteristics]
 
 [http://primus-hiwi.googlecode.com/files/VCR.pdf]
 
