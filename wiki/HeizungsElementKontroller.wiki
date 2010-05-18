@@ -6,9 +6,12 @@ Add your content here.
 
 <img src="http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif" width="450" height="310" align="middle">
 
-[http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif Digital Control of Regulator Output]
-
 [http://graffiti.virgin.net/ljmayes.mal/comp/vcr.htm Using JFET as linear Voltage Controlled Resistor]
+
+[http://primus-hiwi.googlecode.com/files/JFET-App_Notes.pdf Application Note with various circuit examples of VCR's]
+[http://primus-hiwi.googlecode.com/files/JFET-app2.pdf]
+[http://primus-hiwi.googlecode.com/files/VCR.pdf]
+[http://primus-hiwi.googlecode.com/files/VCR2.pdf]
 
 = Details =
 
