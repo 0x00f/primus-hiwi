@@ -4,6 +4,7 @@
 
 Add your content here.
 
+Example usage of a JFET as a Voltage Controlled Resistor to control regulator output
 <img src="http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif" width="450" height="310" align="middle">
 
 [http://graffiti.virgin.net/ljmayes.mal/comp/vcr.htm Using JFET as linear Voltage Controlled Resistor]
