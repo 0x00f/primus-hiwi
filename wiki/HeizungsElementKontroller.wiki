@@ -8,9 +8,12 @@ Add your content here.
 
 [http://graffiti.virgin.net/ljmayes.mal/comp/vcr.htm Using JFET as linear Voltage Controlled Resistor]
 
-[http://primus-hiwi.googlecode.com/files/JFET-App_Notes.pdf Application Note with various circuit examples of VCR's]
+[http://primus-hiwi.googlecode.com/files/JFET-App_Notes.pdf Application Note with various circuit examples of Jfet uses, including VCR]
+
 [http://primus-hiwi.googlecode.com/files/JFET-app2.pdf]
+
 [http://primus-hiwi.googlecode.com/files/VCR.pdf]
+
 [http://primus-hiwi.googlecode.com/files/VCR2.pdf]
 
 = Details =
