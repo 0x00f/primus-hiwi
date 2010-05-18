@@ -4,7 +4,7 @@
 
 Add your content here.
 
-http://graffiti.virgin.net/ljmayes.mal/comp/vcr.htm
+[http://graffiti.virgin.net/ljmayes.mal/comp/vcr.htm Using JFET as linear Voltage Controlled Resistor]
 = Details =
 
 Add your content here.  Format your content with:
