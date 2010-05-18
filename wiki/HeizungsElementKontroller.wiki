@@ -4,7 +4,7 @@
 
 Add your content here.
 
-<img src="http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif" width="650" height="510" align="middle">
+<img src="http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif" width="450" height="310" align="middle">
 
 [http://primus-hiwi.googlecode.com/files/Adjusting%20regulator%20output%20digitally.gif Digital Control of Regulator Output]
 
