@@ -9,7 +9,7 @@ Add your content here.
 
 Rampen Generator Subcircuit Simulation and Test
 
-LTSpice Simulation File: http://primus-hiwi.googlecode.com/files/rampen-generator.asc
+LTSpice Simulation File: [http://primus-hiwi.googlecode.com/files/rampen-generator.asc Rampen Generator LTSpice Simulation]
 
 <img src="http://primus-hiwi.googlecode.com/files/rampen-simulation.JPG" width="980" height="400" align="middle"> 
 
