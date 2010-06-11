@@ -11,7 +11,7 @@ Rampen Generator Subcircuit Simulation and Test
 
 <img src="http://primus-hiwi.googlecode.com/files/rampen-simulation.JPG" width="980" height="400" align="middle"> 
 
-<img src="http://primus-hiwi.googlecode.com/files/rampen-generator.JPG" width="550" height="450" align="middle"> 
+<img src="http://primus-hiwi.googlecode.com/files/rampen-generator.JPG" width="650" height="350" align="middle"> 
 
 
 
