@@ -7,6 +7,13 @@ Add your content here.
 
 = Details =
 
+Rampen Generator Subcircuit Simulation and Test
+
+<img src="http://primus-hiwi.googlecode.com/files/rampen-simulation.bmp" width="550" height="450" align="middle"> 
+
+
+
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
