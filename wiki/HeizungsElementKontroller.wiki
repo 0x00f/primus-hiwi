@@ -17,6 +17,9 @@ Example usage of a JFET as a Voltage Controlled Resistor to control regulator ou
 
 [http://primus-hiwi.googlecode.com/files/VCR2.pdf]
 
+$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+
+
 = Details =
 
 Add your content here.  Format your content with:
