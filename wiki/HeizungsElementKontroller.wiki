@@ -1,4 +1,4 @@
-#summary Voltage and Current regulator circuit to power a 1.2W Heater Pad
+#summary Voltage and Current regulator circuit to power four 12V, 1.2W Heater Pads
 
 = Introduction =
 
@@ -18,7 +18,7 @@ Example usage of a JFET as a Voltage Controlled Resistor to control regulator ou
 [http://primus-hiwi.googlecode.com/files/VCR2.pdf]
 
 $-b \pm \sqrt{b^2 - 4ac} \over 2a$
-<wiki:gadget url="http://mathml-gadget.googlecode.com/svn/trunk/mathml-gadget.xml" border="0" up_content="root3x + x^phi + x_1"/>
+<wiki:gadget url="http://mathml-gadget.googlecode.com/svn/trunk/mathml-gadget.xml" border="0" up_content="R_1 ({3,9U_b+0,5U_in}over{U_in}+1) "/>
 
 = Details =
 
