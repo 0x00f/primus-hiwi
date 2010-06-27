@@ -22,7 +22,7 @@ Example usage of a JFET as a Voltage Controlled Resistor to control regulator ou
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=\inline R_x=R_1\cdot (\frac{3,9\cdot U_b@plus;0,5 \cdot U_{in}}{U_{in}}@plus;1)" target="_blank"><img src="http://latex.codecogs.com/svg.latex?\inline R_x=R_1\cdot (\frac{3,9\cdot U_b+0,5 \cdot U_{in}}{U_{in}}+1)" title="\inline R_x=R_1\cdot (\frac{3,9\cdot U_b+0,5 \cdot U_{in}}{U_{in}}+1)" /></a>
 
-http://latex.codecogs.com/svg.latex?\inline&space;R_x=R_1\cdot&space;(\frac{3,9\cdot&space;U_b&plus;0,5&space;\cdot&space;U_{in}}{U_{in}}&plus;1)
+<img src="http://latex.codecogs.com/svg.latex?\inline R_x=R_1\cdot (\frac{3,9\cdot U_b+0,5 \cdot U_{in}}{U_{in}}+1)" title="\inline R_x=R_1\cdot (\frac{3,9\cdot U_b+0,5 \cdot U_{in}}{U_{in}}+1)" />
 
 = Details =
 
