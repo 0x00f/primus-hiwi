@@ -19,7 +19,7 @@ Example usage of a JFET as a Voltage Controlled Resistor to control regulator ou
 
 <wiki:gadget url="http://mathml-gadget.googlecode.com/svn/trunk/mathml-gadget.xml" border="0" up_content="R_1*(\frac{3,9*U_b+0,5*U_in}{U_in}+1)"/>
 
-<wiki:gadget url="http://mathml-gadget.googlecode.com/svn/trunk/mathml-gadget.xml" border="0" up_content="x=\f{-b \pm \sqrt{b^2 - 4ac}}{2a}"/>
+<wiki:gadget url="http://mathml-gadget.googlecode.com/svn/trunk/mathml-gadget.xml" border="0" up_content="x={-b \pm \sqrt{b^2 - 4ac}} over {2a}"/>
 
 
 
