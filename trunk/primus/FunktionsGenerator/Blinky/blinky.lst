@@ -1,0 +1,323 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Tue Jun 22 17:32:37 2010
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4410
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           # 3 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   102                           	global __config1 ;#
+   103                           # 3 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   104  000000                     	__config1 equ 0xFAFF & 0xFFFF & 0xFFFF ;#
+   105                           # 4 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   106                           	global __config2 ;#
+   107                           # 4 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   108  000000                     	__config2 equ 0xFFFF & 0xFFFB & 0xFFE7 & 0xFFFF
+                                  ;#
+   109                           # 5 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   110                           	global __config3 ;#
+   111                           # 5 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   112  000000                     	__config3 equ 0xFEFF & 0xFDFF & 0xFFFF & 0xFFFF
+                                  ;#
+   113                           # 6 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   114                           	global __config4 ;#
+   115                           # 6 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   116  000000                     	__config4 equ 0xFFBF & 0xFFFF & 0xFFFB & 0xFF7F
+                                  ;#
+   117                           # 7 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   118                           	global __config5 ;#
+   119                           # 7 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   120  000000                     	__config5 equ 0xFFFF ;#
+   121                           # 8 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   122                           	global __config6 ;#
+   123                           # 8 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   124  000000                     	__config6 equ 0xFFFF ;#
+   125                           # 9 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   126                           	global __config7 ;#
+   127                           # 9 "C:\Dokumente und Einstellungen\Einstein1\De
+                                 sktop\Michael\FunktionsGenerator\Blinky\blinky.c
+                                 "
+   128  000000                     	__config7 equ 0xFFFF ;#
+   129                           	GLOBAL	__activetblptr
+   130  000000                     __activetblptr	EQU	0
+   131                           	GLOBAL	__smallconst,__Lsmallconst
+   132  000000                     __smallconst	EQU	__Lsmallconst
+   133                           	GLOBAL	__mediumconst,__Lmediumconst
+   134  000000                     __mediumconst	EQU	__Lmediumconst
+   135                           	GLOBAL	__Ldata
+   136  000000                     __Ldata	EQU	0
+   137                           ;Data sizes: Strings 0, constant 0, data 0, bss 
+                                 0, persistent 0 stack 4
+   138                           	global	_main
+   139                           	global	??_main
+   140                           	global	?_main
+   141                                   psect   text0,class=CODE,space=0,reloc=2
+   142                           
+   143                           	opt lm
+   144                           	file	"C:\Dokumente und Einstellungen\Einstein1\
+                                 Desktop\Michael\FunktionsGenerator\Blinky\blinky
+                                 .c"
+   145                           	line	18
+   146  000000                     	__size_of_main	equ	__end_of_main-_main
+   147                                   psect   text0
+   148                           ;blinky.c: 16: char counter;
+   149                           ;blinky.c: 17: void main(void)
+   150                           ;blinky.c: 18: {
+   151                           	
+   152  003FE8                     _main:		; BSR set to: ?
+   153                           
+   154                           	opt stack 31
+   155                           	line	19
+   156                           ;blinky.c: 19: init();
+   157  003FE8  ECF1  F01F         	call	_init	;wreg free
+   158                           	line	20
+   159                           ;blinky.c: 20: while (1){
+   160                           	
+   161  003FEC                     l110:		; BSR set to: ?
+   162                           
+   163                           	line	21
+   164                           ;blinky.c: 21: PORTB = counter;
+   165  003FEC  C000 FF81          	movff	(c:0),(c:3969)	;volatile
+   166                           	line	22
+   167                           ;blinky.c: 22: _delay(500);
+   168  003FF0  0EA6               	movlw	166
+   169  003FF2                     u667:
+   170  003FF2  2EE8               	decfsz	wreg,f
+   171  003FF4  D7FE               	goto	u667
+   172  003FF6  D000               	nop2	;nop
+   173                           
+   174                           	line	23
+   175                           ;blinky.c: 23: counter++;
+   176  003FF8  2A00               	incf	((c:0)),c
+   177                           	line	24
+   178                           	
+   179  003FFA                     l109:		; BSR set to: ?
+   180                           
+   181                           	line	20
+   182  003FFA  D7F8               	goto	l110
+   183                           	global	start
+   184  003FFC  EF00  F000         	goto	start
+   185                           	opt stack 0
+   186                           GLOBAL __end_of_main
+   187  004000                     	__end_of_main:
+   188                           	FNSIZE	_main,0,0
+   189                           ; =============== function _main ends ==========
+                                 ==
+   190                           
+   191                                   psect   text1,class=CODE,space=0,reloc=2
+   192                           	line	25
+   193                           
+   194                           	opt lm
+   195                           	signat	_main,88
+   196                           	global	_init
+   197                           	global	??_init
+   198                           	global	?_init
+   199                           	file	"C:\Dokumente und Einstellungen\Einstein1\
+                                 Desktop\Michael\FunktionsGenerator\Blinky\blinky
+                                 .c"
+   200                           	line	12
+   201  000000                     	__size_of_init	equ	__end_of_init-_init
+   202                           ;blinky.c: 3: asm("\tglobal __config" "1"); asm(
+                                 "\t__config" "1" " equ " "0xFAFF & 0xFFFF & 0xFF
+                                 FF");
+   203                           ;blinky.c: 4: asm("\tglobal __config" "2"); asm(
+                                 "\t__config" "2" " equ " "0xFFFF & 0xFFFB & 0xFF
+                                 E7 & 0xFFFF");
+   204                           ;blinky.c: 5: asm("\tglobal __config" "3"); asm(
+                                 "\t__config" "3" " equ " "0xFEFF & 0xFDFF & 0xFF
+                                 FF & 0xFFFF");
+   205                           ;blinky.c: 6: asm("\tglobal __config" "4"); asm(
+                                 "\t__config" "4" " equ " "0xFFBF & 0xFFFF & 0xFF
+                                 FB & 0xFF7F");
+   206                           ;blinky.c: 7: asm("\tglobal __config" "5"); asm(
+                                 "\t__config" "5" " equ " "0xFFFF");
+   207                           	
+   208  003FE2                     _init:		; BSR set to: ?
+   209                           
+   210                           	opt stack 30
+   211                           	line	14
+   212                           ;blinky.c: 14: TRISB = 0b00000000;
+   213  003FE2  0E00               	movlw	low(0)
+   214  003FE4  6E93               	movwf	((c:3987)),c	;volatile
+   215                           	line	15
+   216                           ;blinky.c: 15: }
+   217  003FE6                     l107:
+   218                           			; BSR set to: ?
+   219                           
+   220  003FE6  0012               	return
+   221                           	opt stack 0
+   222                           GLOBAL __end_of_init
+   223  003FE8                     	__end_of_init:
+   224                           	FNSIZE	_init,0,0
+   225                           ; =============== function _init ends ==========
+                                 ==
+   226                           
+   227                           	signat	_init,88
+   228                           	FNCALL	_main,_init
+   229                           	FNROOT	_main
+   230                                   psect   const,class=CODE,space=0,reloc=2
+   231                           	global	_counter
+   232                           	global	_counter
+   233  000000                     _counter  equ     0
+   234                           
+   235                           	DABS	1,0,1	;_counter
+   236                           	global	_PORTB
+   237  000000                     _PORTB	equ	0xF81
+   238                           	global	_TRISB
+   239  000000                     _TRISB	equ	0xF93
+   240                           	psect	intsave_regs,class=BIGRAM,space=1
+   241                           	PSECT	param1,class=BANK1,space=1
+   242                           	GLOBAL	__Lparam1
+   243                           	FNCONF	param1,??,?
+   244                           	GLOBAL	__Labsbss0
+   245  000000                     __Labsbss0	EQU	0
+   246                           	GLOBAL	__Habsbss0
+   247  000000                     __Habsbss0	EQU	1
+   248                           GLOBAL	__Lparam, __Hparam
+   249                           GLOBAL	__Lparam1, __Hparam1
+   250  000000                     __Lparam	EQU	__Lparam1
+   251  000000                     __Hparam	EQU	__Hparam1
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Tue Jun 22 17:32:37 2010
+
+          l110 3FEC            l107 3FE6            l109 3FFA  
+          u667 3FF2            wreg 000FE8           _main 3FE8  
+         _init 3FE2           start 0000          ?_main 001E  
+        ?_init 001E          _PORTB 000F81          _TRISB 000F93  
+ __end_of_main 4000   __end_of_init 3FE8         ??_main 001E  
+       ??_init 001E  __activetblptr 000000         __Ldata 000000  
+ __mediumconst 0300     __accesstop 0080        __Hparam 001E  
+      __Lparam 001E        __ramtop 0300        _counter 000000  
+__Lmediumconst 0300      __Habsbss0 000001      __Labsbss0 000000  
+  __smallconst 0300       __Hparam1 001E       __Lparam1 001E  
+ __Lsmallconst 0300       __config1 00FAFF       __config2 00FFE3  
+     __config3 00FCFF       __config4 00FF3B       __config5 00FFFF  
+     __config6 00FFFF       __config7 00FFFF  

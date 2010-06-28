@@ -1,0 +1,65 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;delay.h: 60: extern void DelayMs(unsigned char);
+"11 C:\Dokumente und Einstellungen\Einstein1\Desktop\Michael\FunktionsGenerator\FGEN-Code\delay.c
+[v _DelayMs `(v 1 ef1`uc ]
+{
+[; ;delay.c: 10: void DelayMs(unsigned char cnt)
+[; ;delay.c: 11: {
+[e :U _DelayMs ]
+[v _cnt `uc 1 r1 ]
+[f ]
+"12
+[v _i `uc 1 a ]
+[; ;delay.c: 12: unsigned char i;
+[; ;delay.c: 13: while (cnt--) {
+"13
+[e $U 2  ]
+[e :U 3 ]
+{
+[; ;delay.c: 14: i=4;
+"14
+[e = _i -> -> 4 `i `uc ]
+[; ;delay.c: 15: while(i--) {
+"15
+[e $U 5  ]
+[e :U 6 ]
+{
+[; ;delay.c: 16: { unsigned char _dcnt; if(238>=4) _dcnt=(238*((4*1)/(4*1))/2); else _dcnt=1; while(--_dcnt > 0) { asm("nop"); asm("nop"); continue; } };
+"16
+{
+[v __dcnt `uc 1 a ]
+[e $ ! >= -> 238 `i -> 4 `i 8  ]
+[e = __dcnt -> / * -> 238 `i / * -> 4 `i -> 1 `i * -> 4 `i -> 1 `i -> 2 `i `uc ]
+[e $U 9  ]
+[e :U 8 ]
+[e = __dcnt -> -> 1 `i `uc ]
+[e :U 9 ]
+[e $U 10  ]
+[e :U 11 ]
+{
+[; nop ;#
+[; nop ;#
+[e $U 10  ]
+}
+[e :U 10 ]
+[e $ > -> =- __dcnt -> -> 1 `i `uc `i -> 0 `i 11  ]
+[e :U 12 ]
+}
+"17
+}
+[e :U 5 ]
+"15
+[e $ != -> -- _i -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 6  ]
+[e :U 7 ]
+"18
+}
+[e :U 2 ]
+"13
+[e $ != -> -- _cnt -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 3  ]
+[e :U 4 ]
+[; ;delay.c: 17: }
+[; ;delay.c: 18: }
+[; ;delay.c: 19: }
+"19
+[e :UE 1 ]
+}
