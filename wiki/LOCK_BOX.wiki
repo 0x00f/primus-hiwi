@@ -1,4 +1,4 @@
-#Summary Eine Laser Lock Schaltung, die den Laser auf eine externe Referenz lockt.
+#summary Eine Laser Lock Schaltung, die den Laser auf eine externe Referenz lockt.
 
 = Introduction =
 
