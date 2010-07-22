@@ -9,6 +9,8 @@ Add your content here.
 
 Some texts which give a good Theoretic background for the use and implementation of an electronic Laser Locking Circuit.
 
+ * http://primus-hiwi.googlecode.com/files/laser-lock.pdf
+ *
 
 = Circuit Simulations and Tests =
 
