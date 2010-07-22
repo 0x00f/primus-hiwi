@@ -7,7 +7,7 @@ Add your content here.
 
 = Details =
 
-Some texts which give a good Theoretic background for the use and implementation of an electronic Laser Locking Circuit.
+Some texts which give a good theoretical background for the use and implementation of an electronic Laser Locking Circuit.
 
  * [http://primus-hiwi.googlecode.com/files/laser-lock.pdf Stabilizing a diode laser to an external reference] - See Chapter 4, Laser Locking Circuit
  * [http://primus-hiwi.googlecode.com/files/laserlock2.pdf A CO2 Laser Lattice Experiment for Cold Atoms] - See Chapter 5.3, Laser Stabilization
