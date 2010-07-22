@@ -22,6 +22,7 @@ LTSpice Simulation File: [http://primus-hiwi.googlecode.com/files/rampen-generat
 
 = PCB's =
 
+<img src="http://primus-hiwi.googlecode.com/files/lock-amp-prototype.JPG" width="580" height="450" align="middle">
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
