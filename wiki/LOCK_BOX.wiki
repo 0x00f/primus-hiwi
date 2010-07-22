@@ -2,7 +2,7 @@
 
 = Introduction =
 *Images are taken from the two Articles below
-<img src="http://primus-hiwi.googlecode.com/files/laser-lock-flowchart.JPG" width="900" height="300" align="middle">
+<img src="http://primus-hiwi.googlecode.com/files/laser-lock-flowchart.JPG" width="950" height="300" align="middle">
 
 = Details =
 
