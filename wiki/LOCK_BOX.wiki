@@ -31,4 +31,4 @@ First Prototype PCB:
 = Schematics, Layouts and GERBER files =
 
 *Schematics:
-  #[http://primus-hiwi.googlecode.com/files/lock-ampV5%5B13.07.pdf Lock Box Prototype Schematic V5]
+  # [http://primus-hiwi.googlecode.com/files/lock-ampV5%5B13.07.pdf Lock Box Prototype Schematic V5]
