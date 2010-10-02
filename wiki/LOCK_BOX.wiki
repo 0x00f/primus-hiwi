@@ -37,7 +37,9 @@ Controller to operate the circuit externally:
 
 = Controller Source Code =
 
-Original C18 source code, compiles in MPLAB:[http://code.google.com/p/primus-hiwi/source/browse/trunk/primus/Lock-In-Amplifier/lock-controller/lock-controller.c Source Code]
+Original C18 source code, compiles in MPLAB: [http://code.google.com/p/primus-hiwi/source/browse/trunk/primus/Lock-In-Amplifier/lock-controller/lock-controller.c Source Code]
+
+Compiled .HEX file, ready to be programmed into the chip: [http://code.google.com/p/primus-hiwi/source/browse/trunk/primus/Lock-In-Amplifier/lock-controller/lock-controller.hex lock-controller.hex]
 
 
 = Schematics, Layouts and GERBER files =
