@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+Delay10TCYx	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	36;"	p	line:36	file:	signature:(unsigned char unit)
+FAST_RELAY::PORTBbits.RB2	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	31;"	d	line:31	file:
+INPUT1::PORTBbits.RB0	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	25;"	d	line:25	file:
+INPUT2::PORTBbits.RB1	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	26;"	d	line:26	file:
+INTEXT::PORTAbits.RA3	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	30;"	d	line:30	file:
+RAMP_RELAY::PORTBbits.RB4	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	33;"	d	line:33	file:
+SLOW_RELAY::PORTBbits.RB3	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	32;"	d	line:32	file:
+ZUST_A::PORTAbits.RA0	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	27;"	d	line:27	file:
+ZUST_B::PORTAbits.RA1	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	28;"	d	line:28	file:
+ZUST_C::PORTAbits.RA2	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	29;"	d	line:29	file:
+main	C:\Documents and Settings\0x00F\My Documents\My Dropbox\code\C18\lock-controller\lock-controller.c	39;"	f	line:39	signature:(void)
