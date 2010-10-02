@@ -34,10 +34,9 @@ Controller to operate the circuit externally:
 
 <img src="http://primus-hiwi.googlecode.com/files/2010-10-01%2017.39.51.jpg" width="400" height="290" align="right">
 
-
 = Controller Source Code =
 
-[http://code.google.com/p/primus-hiwi/source/browse/trunk/primus/Lock-In-Amplifier/lock-controller/lock-controller.c Source Code]
+Original C18 source code, compiles in MPLAB:[http://code.google.com/p/primus-hiwi/source/browse/trunk/primus/Lock-In-Amplifier/lock-controller/lock-controller.c Source Code]
 
 
 = Schematics, Layouts and GERBER files =
