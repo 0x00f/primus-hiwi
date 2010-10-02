@@ -28,9 +28,9 @@ First Prototype PCB:
 
 <img src="http://primus-hiwi.googlecode.com/files/lock-amp-prototype.JPG" width="680" height="550" align="middle">
 
-<img src="http://primus-hiwi.googlecode.com/files/2010-10-01%2017.40.02.jpg" width="450" height="300" align="left">
+<img src="http://primus-hiwi.googlecode.com/files/2010-10-01%2017.40.02.jpg" width="480" height="300" align="left">
 
-<img src="http://primus-hiwi.googlecode.com/files/2010-10-01%2017.39.51.jpg" width="450" height="300" align="left">
+<img src="http://primus-hiwi.googlecode.com/files/2010-10-01%2017.39.51.jpg" width="480" height="300" align="right">
 
 
 = Schematics, Layouts and GERBER files =
