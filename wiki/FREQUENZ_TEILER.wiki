@@ -7,7 +7,7 @@ Add your content here.
 
 = Details =
 A user manual for usage and programming of the frequency divider:
-*[http://primus-hiwi.googlecode.com/files/FrequenzTeilerUserGuideV1.pdf User manual] 
+*[http://primus-hiwi.googlecode.com/files/FrequenzTeilerUserGuideV1.pdf Frequency Divider User Manual V1] 
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
