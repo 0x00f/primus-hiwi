@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+A user manual for usage and programming of the frequency divider:
+*[http://primus-hiwi.googlecode.com/files/FrequenzTeilerUserGuideV1.pdf User manual] 
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
