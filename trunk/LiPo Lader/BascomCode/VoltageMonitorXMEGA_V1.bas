@@ -7,17 +7,23 @@
 '*           ZARM Universitaet Bremen           *
 '************************************************
 
-' Wir benutzen den ATMega8
-$regfile = "m8def.dat"
+' Wir benutzen den xMega64A3U
+$regfile = "xm64a3udef.dat"
 ' MyAVR Board hat ein 3.6864MHz Crystal
 ' Diese Frequenz ermöglich Serielle BAUD Raten mit 0% Fehler
 ' Wichtig: Der Mega muss den Ext Osc. Fuse gesetzt haben
-$crystal = 8000000
+$crystal = 32000000
 ' Print/RS232 Baud Rate
 $baud = 9600
 
-$hwstack = 32       ' default use 32 for the hardware stack
-$swstack = 10       ' default use 10 for the SW stack
+'first enable the osc of your choice
+Config Osc = Enabled , 32mhzosc = Enabled
+
+'configure the systemclock
+Config Sysclock = 32mhz , Prescalea = 1 , Prescalebc = 1_1
+
+$hwstack = 64       ' default use 32 for the hardware stack
+$swstack = 40       ' default use 10 for the SW stack
 $framesize = 40       ' default use 40 for the frame space
 
 ' Configure lcd screen
@@ -35,7 +41,7 @@ Config Adc = Single , Prescaler = Auto , Reference = Avcc
 Start Adc
 
 ' Configure TWI / I2C
-Config Twislave = &H70 , Btr = 2 , Bitrate = 100000 , Gencall = 1
+Config Twicslave = &H70 , Btr = 2       ' , Bitrate = 100000 , Gencall = 1
 ' In i2c the address has 7 bits. The LS bit is used to indicate read or write
 ' When the bit is 0, it means a write and a 1 means a read
 ' When you address a slave with the master in bascom, the LS bit will be set/reset automatic.
