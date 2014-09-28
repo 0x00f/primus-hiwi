@@ -14,7 +14,8 @@ $regfile = "xm64a3udef.dat"
 ' Wichtig: Der Mega muss den Ext Osc. Fuse gesetzt haben
 $crystal = 32000000
 ' Print/RS232 Baud Rate
-$baud = 9600
+'$baud = 9600
+Config Com1 = 9600 , Mode = Asynchroneous , Parity = None , Stopbits = 1 , Databits = 8
 
 'first enable the osc of your choice
 Config Osc = Enabled , 32mhzosc = Enabled
@@ -30,15 +31,8 @@ $framesize = 40       ' default use 40 for the frame space
 Config Lcdpin = Pin , Db4 = Portd.4 , Db5 = Portd.5 , Db6 = Portd.6 , Db7 = Portd.7 , E = Portd.3 , Rs = Portd.2
 Config Lcd = 16 * 2
 
-' Configure ADC
-' Configure single mode and auto prescaler setting
-' The single mode must be used with the GETADC() function
-' The prescaler divides the internal clock by 2,4,8,16,32,64 or 128
-' Because the ADC needs a clock from 50-200 KHz
-' The AUTO feature, will select the highest clockrate possible
-Config Adc = Single , Prescaler = Auto , Reference = Avcc
-' Now give power to the chip
-Start Adc
+'setup the ADC-A converter
+Config Adca = Single , Convmode = Unsigned , Resolution = 12bit , Dma = Off , Reference = Intvcc , Event_mode = None , Prescaler = 32 , Ch0_gain = 1 , Ch0_inp = Single_ended , Mux0 = &B000_00 , Ch1_gain = 1 , Ch1_inp = Single_ended , Mux1 = &B1_000 , Ch2_gain = 1 , Ch2_inp = Single_ended , Mux2 = &B10_000 , Ch3_gain = 1 , Ch3_inp = Single_ended , Mux3 = &B11_000
 
 ' Configure TWI / I2C
 Config Twicslave = &H70 , Btr = 2       ' , Bitrate = 100000 , Gencall = 1
@@ -55,6 +49,9 @@ Config Twicslave = &H70 , Btr = 2       ' , Bitrate = 100000 , Gencall = 1
 ' As you might need other interrupts as well, you need to enable them all manual
 Enable Interrupts
 
+Open "COM1:" For Binary As #1
+
+Open "twic" For Binary As #4
 
 Led Alias Portb.1       'Define name
 Config Portb = Output       'Config Port A as output
@@ -78,7 +75,7 @@ Channel2 = 1
 W = &H3FF
 Shift W , Right , 3
 
-Print "M8 Slave Voltage Monitor V2"
+Print "xMega64 Slave Voltage Monitor V2"
 
 Cls       'clear the LCD display
 Lcd "Hello world."       'display this at the top line
@@ -96,35 +93,37 @@ Shiftlcd Left 17
 
 
 Do
-Led = 1       'switch off all LEDS
-Waitms 300       'wait 1 second
-Led = 0
+   Led = 1       'switch off all LEDS
+   Waitms 300       'wait 1 second
+   Led = 0
 
-Disable Interrupts
-   W = Getadc(0)
-   X = Getadc(1)
-   Y = Getadc(2)
-   Z = Getadc(3)
-   W_v = W * 3222
-   X_v = X * 3222
-   Y_v = Y * 3222
-   Z_v = Z * 3222
-   Print "CH0: " ; W_v ; " CH1: " ; X_v ; " CH2: " ; Y_v ; " CH3: " ; Z_v
-Enable Interrupts
+   Disable Interrupts
+      'W = Getadc(0)
+      W = Getadc(adca , 0 , 8)
+      X = Getadc(adca , 0 , 16)
+      Y = Getadc(adca , 0 , 24)
+      Z = Getadc(adca , 0 , 32)
+      W_v = W * 3222
+      X_v = X * 3222
+      Y_v = Y * 3222
+      Z_v = Z * 3222
+      Print "CH0: " ; W_v ; " CH1: " ; X_v ; " CH2: " ; Y_v ; " CH3: " ; Z_v
+   Enable Interrupts
 
-  'Upperline
- ' Cls       ' Clear the LCD
- ' Lcd "Ch " ; Channel1 ; ": " ; W
-  'Lowerline
-  'W = Getadc(1)
- ' Lcd "Ch " ; Channel2 ; ": " ; W
-  Waitms 500
-'Print "Toggle PortB.1"
-Waitms 300       'wait 1 second
+     'Upperline
+    ' Cls       ' Clear the LCD
+    ' Lcd "Ch " ; Channel1 ; ": " ; W
+     'Lowerline
+     'W = Getadc(1)
+    ' Lcd "Ch " ; Channel2 ; ": " ; W
+     Waitms 500
+   'Print "Toggle PortB.1"
+   Waitms 300       'wait 1 second
 
 Loop
                                                            'unconditional loop
 End
+
 
 
 'A master can send or receive bytes.
@@ -166,17 +165,17 @@ Twi_master_needs_byte:
   Temp_word = W       ' all 10 bits of adc value stored in Temp_word
   Shift Temp_word , Right , 8
 
-  If Twi_btr = 1 Then       ' send lower 8 bits of adc value
-    Twi = Temp
+  If Twic_btr = 1 Then       ' send lower 8 bits of adc value
+    Twic = Temp
    ' Print "Sent lower 8: " ; Twi
     'Twi = 5
-  Elseif Twi_btr = 2 Then       'send remaining 2 bits of adc value
-    Twi = Temp_word
+  Elseif Twic_btr = 2 Then       'send remaining 2 bits of adc value
+    Twic = Temp_word
    ' Print "Sent upper 2: " ; Twi
     'Twi = 50
     'Print "twi is: " ; Twi
   Else
-    Twi = 0
+    Twic = 0
   End If
 
 Return
@@ -184,5 +183,5 @@ Return
 
 'when the mast has all bytes received this label will be called
 Twi_master_need_nomore_byte:
-  'Print "Master does not need anymore bytes"
+  Print #1 , "Master does not need anymore bytes"
 Return
