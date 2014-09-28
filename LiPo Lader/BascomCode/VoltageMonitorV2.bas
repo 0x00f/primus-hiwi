@@ -50,9 +50,11 @@ Config Twislave = &H70 , Btr = 2 , Bitrate = 100000 , Gencall = 1
 Enable Interrupts
 
 
-Led Alias Portb.1       'Define name
+Led Alias Portb.0       'Define name
 Config Portb = Output       'Config Port A as output
 'Config Portc = Input
+
+'Const Ref = 3.3 / 1024
 
 ' Byte Types are unsigned 8-Bit numbers, 0 to 255 (1 Byte used)
 ' Integer Types are signed 16-Bit numbers, -32,768 to +32,767 (2 Bytes used)
@@ -62,10 +64,12 @@ Config Portb = Output       'Config Port A as output
 Dim A As Byte
 Dim Temp As Byte       ' Used when shifting the 10 bit ADC into Byte vars
 Dim Temp_word As Word
-Dim W As Word , X As Word , Y As Word , Z As Word
+Dim W As Long , X As Word , Y As Word , Z As Word
 Dim W_v As Long , X_v As Long , Y_v As Long , Z_v As Long
 Dim Channel1 As Byte , Channel2 As Byte
 Dim V1 As Word , V2 As Word
+Dim W1 As Long , W2 As Long , W3 As Long , W4 As Long , W5 As Long
+Dim W_v_d As Single
 Channel1 = 0
 Channel2 = 1
 
@@ -95,15 +99,61 @@ Waitms 300       'wait 1 second
 Led = 0
 
 Disable Interrupts
-   W = Getadc(0)
+   'W = Getadc(0)
+   W = 0
+   W1 = Getadc(0)
+   W2 = Getadc(0)
+   W3 = Getadc(0)
+   W4 = Getadc(0)
+   W5 = Getadc(0)
+
+   W = W + W1
+   W = W + W2
+   W = W + W3
+   W = W + W4
+   W = W + W5
+   W = W / 5
+
+   'Print "CH0 Raw ADC: " ; W
+
    X = Getadc(1)
    Y = Getadc(2)
    Z = Getadc(3)
-   W_v = W * 3222
+
+   ' Calculate the correct voltage by + or - the offset
+   'If W < 500 Then
+   '   W_v = W * 3222
+   '   W_v = 100
+   'Else
+   '   W_v = W * 3222
+   '   W_v = W_v + 1000
+   'End If
+
+   W_v = W * 3222656
+   'W_v = W_v * 0.997815783
+
+   W_v_d = W_v
+
+   W_v_d = W_v_d / 1000000000
+
+   W_v_d = W_v_d * 997815783
+
+   'W_v = W_v - 1.1575429454
+   W_v_d = W_v_d - 1157429454
+
+   'W_v_d = W_v_d / 1000000000
+
+
+   'W_v = W_v - 5000       '
+   'W_v = W_v + 7000       ' ADC genauigkeit offset wert
+
    X_v = X * 3222
    Y_v = Y * 3222
    Z_v = Z * 3222
-   Print "CH0: " ; W_v ; " CH1: " ; X_v ; " CH2: " ; Y_v ; " CH3: " ; Z_v
+
+   Print "CH0: " ; W_v_d ; " CH1: " ; X_v ; " CH2: " ; Y_v ; " CH3: " ; Z_v
+
+
 Enable Interrupts
 
   'Upperline
