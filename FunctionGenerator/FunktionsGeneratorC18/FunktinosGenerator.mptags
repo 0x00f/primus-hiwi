@@ -1,0 +1,128 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+BAUD::9600	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	32;"	d	line:32	file:
+CLK::40000000	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	33;"	d	line:33	file:
+CR	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	37;"	v	line:37
+E_PIN::PORTEbits.RE0	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	31;"	d	line:31	file:
+GREETING	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	944;"	v	line:944
+LCD_clear	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	197;"	f	line:197	signature:(void)
+LCD_command	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	131;"	f	line:131	signature:(unsigned int command)
+LCD_echo	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	109;"	f	line:109	signature:(unsigned int character)
+LCD_init	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	202;"	f	line:202	signature:(void)
+LCD_movecursor	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	143;"	f	line:143	signature:( int line, int column)
+LCD_write	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	155;"	f	line:155	signature:( char *a)
+LF	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	38;"	v	line:38
+MACHINE_data	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	66;"	v	line:66
+MACHINE_idleCount	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	64;"	v	line:64
+MACHINE_msg	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	65;"	v	line:65
+MACHINE_state	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	61;"	v	line:61
+MACHINE_state0_loopcount	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	63;"	v	line:63
+MACHINE_state0_page	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	62;"	v	line:62
+MACHINE_state1_cursor	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	636;"	v	line:636
+MACHINE_state1_page	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	634;"	v	line:634
+MACHINE_state1_repaint	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	635;"	v	line:635
+MAX_MENU	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	67;"	v	line:67
+PPG1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	40;"	v	line:40
+PPG2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	41;"	v	line:41
+PPG3	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	42;"	v	line:42
+PPG4	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	43;"	v	line:43
+PPGLOADING1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	673;"	v	line:673
+PPGLOADING2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	674;"	v	line:674
+PPG_CH1_amp	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	46;"	v	line:46
+PPG_CH2_amp	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	47;"	v	line:47
+PPG_USART_reset	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	400;"	p	line:400	file:
+PPG_USART_reset	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	675;"	f	line:675
+PPG_frequency	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	45;"	v	line:45
+PPG_phase	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	48;"	v	line:48
+PPG_read	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	439;"	f	line:439	signature:( void)
+PPG_reset_firstrun	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	49;"	v	line:49
+PPG_save	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	406;"	f	line:406
+PPG_save_msg1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	402;"	v	line:402
+PPG_save_msg2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	403;"	v	line:403
+PPG_save_msg3	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	404;"	v	line:404
+PPG_save_msg4	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	405;"	v	line:405
+RS_PIN::PORTCbits.RC5	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	30;"	d	line:30	file:
+RW_PIN::PORTEbits.RE2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	29;"	d	line:29	file:
+SERIAL_cmd	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	54;"	v	line:54
+SERIAL_data	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	53;"	v	line:53
+SERIAL_pos	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	57;"	v	line:57
+SERIAL_readstate	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	58;"	v	line:58
+SERIAL_reset	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	98;"	f	line:98	signature:( void)
+SERIAL_send	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	52;"	v	line:52
+SERIAL_valid	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	56;"	v	line:56
+SHUTDOWN1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	945;"	v	line:945
+SHUTDOWN2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	946;"	v	line:946
+USART_MAX_READ	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	59;"	v	line:59
+array_fill	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	80;"	f	line:80	signature:( char *a, int count, int value)
+buffer	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	379;"	l	line:379
+buffer	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	407;"	l	line:407
+buffer	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	440;"	l	line:440
+buffer1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	319;"	l	line:319
+buffer2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	320;"	l	line:320
+button	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	830;"	l	line:830
+button_handler	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	216;"	p	line:216	file:	signature:(void)
+button_handler	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	233;"	f	line:233	signature:(void)
+button_int	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	220;"	f	line:220	signature:(void)
+c	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	337;"	l	line:337
+c	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	441;"	l	line:441
+changeMode	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	378;"	f	line:378	signature:( int mode)
+config	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	277;"	l	line:277
+currentPos	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	640;"	l	line:640
+currentPosB	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	641;"	l	line:641
+d	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	712;"	l	line:712
+error	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	317;"	f	line:317
+error_message	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	185;"	f	line:185	signature:(void)
+handleIdle	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	595;"	f	line:595	signature:( void)
+handleMenu	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	896;"	f	line:896	signature:( void)
+handleMsg	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	829;"	f	line:829	signature:( void)
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	145;"	l	line:145
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	156;"	l	line:156
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	318;"	l	line:318
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	338;"	l	line:338
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	362;"	l	line:362
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	380;"	l	line:380
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	409;"	l	line:409
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	442;"	l	line:442
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	642;"	l	line:642
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	676;"	l	line:676
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	713;"	l	line:713
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	71;"	l	line:71
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	81;"	l	line:81
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	89;"	l	line:89
+i	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	950;"	l	line:950
+initPorts	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	276;"	f	line:276	signature:(void)
+k	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	363;"	l	line:363
+k	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	443;"	l	line:443
+l	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	443;"	l	line:443
+m	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	443;"	l	line:443
+main	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	949;"	f	line:949	signature:(void)
+mask	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	639;"	l	line:639
+menuChange	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	711;"	f	line:711	signature:( int vorzeichen)
+menuValidateCursor	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	638;"	f	line:638	signature:( void)
+msg1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	186;"	l	line:186
+msg1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	596;"	l	line:596
+msg1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	897;"	l	line:897
+msg2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	187;"	l	line:187
+msg2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	597;"	l	line:597
+msg2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	898;"	l	line:898
+myOpenUSART	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	302;"	f	line:302
+myputsUSART	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	88;"	f	line:88	signature:( char *a)
+numbers	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	376;"	v	line:376
+offset	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	950;"	l	line:950
+p	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	444;"	l	line:444
+paint_msg	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	164;"	f	line:164	signature:( char *msg1, char *msg2)
+putsUSARTecho	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	361;"	f	line:361	signature:( char *a)
+readFromUSART	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	336;"	f	line:336	signature:( void)
+reload_msg1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	709;"	v	line:709
+reload_msg2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	710;"	v	line:710
+terminated	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	35;"	v	line:35
+wait10	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	70;"	f	line:70	signature:( int count)
+welcome1	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	174;"	l	line:174
+welcome2	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	175;"	l	line:175
+welcome_message	C:\Users\Michael\Desktop\FunktionsGeneratorC18\main.c	173;"	f	line:173	signature:(void)
