@@ -20,9 +20,6 @@ $hwstack = 32       ' default use 32 for the hardware stack
 $swstack = 10       ' default use 10 for the SW stack
 $framesize = 40       ' default use 40 for the frame space
 
-' Configure lcd screen
-Config Lcdpin = Pin , Db4 = Portd.4 , Db5 = Portd.5 , Db6 = Portd.6 , Db7 = Portd.7 , E = Portd.3 , Rs = Portd.2
-Config Lcd = 16 * 2
 
 ' Configure ADC
 ' Configure single mode and auto prescaler setting
@@ -46,51 +43,40 @@ Config Twislave = &H70 , Btr = 2 , Bitrate = 100000 , Gencall = 1
 ' by using &H71 as a slave address, or by using GENCALL=1
 
 
+
 ' As you might need other interrupts as well, you need to enable them all manual
 Enable Interrupts
 
 
 Led Alias Portb.0       'Define name
 Config Portb = Output       'Config Port A as output
-'Config Portc = Input
 
-'Const Ref = 3.3 / 1024
 
 ' Byte Types are unsigned 8-Bit numbers, 0 to 255 (1 Byte used)
 ' Integer Types are signed 16-Bit numbers, -32,768 to +32,767 (2 Bytes used)
 ' Word Types are unsigned 16-Bit Numbers, 0 to 65535 (2 Bytes used)
 ' Long Types are signed 32-Bit Numbers, -2147483648 to 2147483647 (4 Bytes used)
 
-Dim A As Byte
 Dim Temp As Byte       ' Used when shifting the 10 bit ADC into Byte vars
 Dim Temp_word As Word
-Dim W As Long , X As Word , Y As Word , Z As Word
-Dim W_v As Long , X_v As Long , Y_v As Long , Z_v As Long
+Dim W As Long , 1c As Word , 2c As Word , 3c As Word
+Dim W_v As Long , 1c_vout As Single , 2c_vout As Single , 3c_vout As Single
+Dim W_vin As Long , 1c_vin As Single , 2c_vin As Single , 3c_vin As Single
+Dim 1c_vin_long As Long , 2c_vin_long As Long , 3c_vin_long As Long
 Dim Channel1 As Byte , Channel2 As Byte
 Dim V1 As Word , V2 As Word
 Dim W1 As Long , W2 As Long , W3 As Long , W4 As Long , W5 As Long
+Dim Delta_1c As Long , Delta_2c As Long , Delta_3c As Long
+
+Dim W_v_d_long As Long       ' Store the single as a long f
+
 Dim W_v_d As Single
+
 Channel1 = 0
 Channel2 = 1
 
-W = &H3FF
-Shift W , Right , 3
 
-Print "M8 Slave Voltage Monitor V2"
-
-Cls       'clear the LCD display
-Lcd "Hello world."       'display this at the top line
-Lowerline       'select the lower line
-Wait 1
-Lcd "ATMega8 ADC Demo"       'display this at the lower line
-Wait 1
-For A = 1 To 16
-   Shiftlcd Right       'shift the text to the right
-   Waitms 100       'wait a moment
-Next
-
-Cls
-Shiftlcd Left 17
+Print "M8 Slave Voltage Monitor V2.1"
 
 
 Do
@@ -99,7 +85,7 @@ Waitms 300       'wait 1 second
 Led = 0
 
 Disable Interrupts
-   'W = Getadc(0)
+
    W = 0
    W1 = Getadc(0)
    W2 = Getadc(0)
@@ -116,53 +102,79 @@ Disable Interrupts
 
    'Print "CH0 Raw ADC: " ; W
 
-   X = Getadc(1)
-   Y = Getadc(2)
-   Z = Getadc(3)
+   1c = Getadc(1)
+   2c = Getadc(2)
+   3c = Getadc(3)
 
-   ' Calculate the correct voltage by + or - the offset
-   'If W < 500 Then
-   '   W_v = W * 3222
-   '   W_v = 100
-   'Else
-   '   W_v = W * 3222
-   '   W_v = W_v + 1000
-   'End If
 
+   ' GND Spannung
    W_v = W * 3222656
-   'W_v = W_v * 0.997815783
-
-   W_v_d = W_v
-
    W_v_d = W_v_d / 1000000000
-
    W_v_d = W_v_d * 997815783
-
-   'W_v = W_v - 1.1575429454
    W_v_d = W_v_d - 1157429454
 
-   'W_v_d = W_v_d / 1000000000
+   ' Convert single to a long
+   W_v_d_long = W_v_d
 
 
-   'W_v = W_v - 5000       '
-   'W_v = W_v + 7000       ' ADC genauigkeit offset wert
 
-   X_v = X * 3222
-   Y_v = Y * 3222
-   Z_v = Z * 3222
+   ' Spannungen nach dem Spannungsteiler
+   1c_vout = 1c * 3222656
+   1c_vout = 1c_vout / 1000000000
 
-   Print "CH0: " ; W_v_d ; " CH1: " ; X_v ; " CH2: " ; Y_v ; " CH3: " ; Z_v
+   2c_vout = 2c * 3222656
+   2c_vout = 2c_vout / 1000000000
+
+   3c_vout = 3c * 3222656
+   3c_vout = 3c_vout / 1000000000
+
+
+   ' Spannungen vor dem Spannungsteiler
+   ' 1c_vin = (10k + 45.7k) * (1c_vout / 45.7k)
+   1c_vin = 1c_vout / 45700
+   1c_vin = 1c_vin * 55700
+   1c_vin_long = 1c_vin * 100
+
+   ' 2c_vin = (10k + 69.56k) * (2c_vout / 69.56k)
+   2c_vin = 2c_vout / 69560
+   2c_vin = 2c_vin * 79560
+   2c_vin_long = 2c_vin * 100
+
+   ' 3c_vin = (10k + 37.64k) * (3c_vout / 37.64k)
+   3c_vin = 3c_vout / 37640
+   3c_vin = 3c_vin * 47640
+   3c_vin_long = 3c_vin * 100
+
+
+   ' Hier werden die Differenzen zwischen einzelnen Spannungen berechnet
+   ' Somit müssen wir nicht alle Spannungen einzelnd zu Master senden
+    Delta_1c = 1.5
+    Delta_2c = 2c_vout - 1c_vout
+    Delta_3c = 3c_vout - 2c_vout
+
+   ' Hier mappen wir die Differenzspannungen die zwischen 4.05V und 1.05V liegen
+   ' auf Werte zwischen 0 und 255. Somit können die Daten in einem 8 Bit
+   ' I2C Read gesendet werden:
+   ' Schritt 1: Ziehe 1.5V von der gemessene Spannung ab
+   Delta_1c = Delta_1c - 1.5
+   Delta_2c = Delta_2c - 1.5
+   Delta_3c = Delta_3c - 1.5
+
+   ' Schritt 2: Multipliziere bei 100 (2.55 -> 255 = 0b11111111)
+   ' Damit gilt für den min. Wert von 1.5: (1.50 - 1.50) * 100 = 000
+   ' Für den max. Wert von 4.05 gilt:      (4.05 - 1.50) * 100 = 255
+   Delta_1c = Delta_1c * 100
+   Delta_2c = Delta_2c * 100
+   Delta_3c = Delta_3c * 100
+
+   Print "CH0: " ; W_v_d ; " CH1: " ; 1c_vout ; " CH2: " ; 2c_vout ; " CH3: " ; 3c_vout
+   Print "1C: " ; 1c_vin ; " 2C: " ; 2c_vin ; " 3C: " ; 3c_vin
 
 
 Enable Interrupts
 
-  'Upperline
- ' Cls       ' Clear the LCD
- ' Lcd "Ch " ; Channel1 ; ": " ; W
-  'Lowerline
-  'W = Getadc(1)
- ' Lcd "Ch " ; Channel2 ; ": " ; W
-  Waitms 500
+
+Waitms 500
 'Print "Toggle PortB.1"
 Waitms 300       'wait 1 second
 
