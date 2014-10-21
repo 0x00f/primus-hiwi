@@ -57,23 +57,17 @@ Config Portb = Output       'Config Port A as output
 ' Word Types are unsigned 16-Bit Numbers, 0 to 65535 (2 Bytes used)
 ' Long Types are signed 32-Bit Numbers, -2147483648 to 2147483647 (4 Bytes used)
 
-Dim Temp As Byte       ' Used when shifting the 10 bit ADC into Byte vars
-Dim Temp_word As Word
+' These Vars store the Raw ADC Data, which is a 10 Bit Value between 0 and 1023
 Dim W As Long , 1c As Word , 2c As Word , 3c As Word
-Dim W_v As Long , 1c_vout As Single , 2c_vout As Single , 3c_vout As Single
+Dim 1c_vout As Single , 2c_vout As Single , 3c_vout As Single
 Dim W_vin As Long , 1c_vin As Single , 2c_vin As Single , 3c_vin As Single
-Dim 1c_vin_long As Long , 2c_vin_long As Long , 3c_vin_long As Long
-Dim Channel1 As Byte , Channel2 As Byte
-Dim V1 As Word , V2 As Word
-Dim W1 As Long , W2 As Long , W3 As Long , W4 As Long , W5 As Long
-Dim Delta_1c As Long , Delta_2c As Long , Delta_3c As Long
 
-Dim W_v_d_long As Long       ' Store the single as a long f
+Dim W1 As Long , W2 As Long , W3 As Long , W4 As Long , W5 As Long
+Dim Delta_1c As Single , Delta_2c As Single , Delta_3c As Single
+Dim Delta_1c_b As Byte , Delta_2c_b As Byte , Delta_3c_b As Byte
 
 Dim W_v_d As Single
 
-Channel1 = 0
-Channel2 = 1
 
 
 Print "M8 Slave Voltage Monitor V2.1"
@@ -108,14 +102,11 @@ Disable Interrupts
 
 
    ' GND Spannung
-   W_v = W * 3222656
+   W_v_d = W
+   W_v_d = W_v_d * 3222656
    W_v_d = W_v_d / 1000000000
-   W_v_d = W_v_d * 997815783
-   W_v_d = W_v_d - 1157429454
-
-   ' Convert single to a long
-   W_v_d_long = W_v_d
-
+   W_v_d = W_v_d * 0.997815783
+   W_v_d = W_v_d - 1.157429454
 
 
    ' Spannungen nach dem Spannungsteiler
@@ -133,26 +124,25 @@ Disable Interrupts
    ' 1c_vin = (10k + 45.7k) * (1c_vout / 45.7k)
    1c_vin = 1c_vout / 45700
    1c_vin = 1c_vin * 55700
-   1c_vin_long = 1c_vin * 100
+
 
    ' 2c_vin = (10k + 69.56k) * (2c_vout / 69.56k)
    2c_vin = 2c_vout / 69560
    2c_vin = 2c_vin * 79560
-   2c_vin_long = 2c_vin * 100
+
 
    ' 3c_vin = (10k + 37.64k) * (3c_vout / 37.64k)
    3c_vin = 3c_vout / 37640
    3c_vin = 3c_vin * 47640
-   3c_vin_long = 3c_vin * 100
 
 
    ' Hier werden die Differenzen zwischen einzelnen Spannungen berechnet
    ' Somit müssen wir nicht alle Spannungen einzelnd zu Master senden
-    Delta_1c = 1.5
-    Delta_2c = 2c_vout - 1c_vout
-    Delta_3c = 3c_vout - 2c_vout
+    Delta_1c = 1c_vin - W_v_d
+    Delta_2c = 2c_vin - 1c_vin
+    Delta_3c = 3c_vin - 2c_vin
 
-   ' Hier mappen wir die Differenzspannungen die zwischen 4.05V und 1.05V liegen
+   ' Hier mappen wir die Differenzspannungen die zwischen 4.05V und 1.5V liegen
    ' auf Werte zwischen 0 und 255. Somit können die Daten in einem 8 Bit
    ' I2C Read gesendet werden:
    ' Schritt 1: Ziehe 1.5V von der gemessene Spannung ab
@@ -167,11 +157,16 @@ Disable Interrupts
    Delta_2c = Delta_2c * 100
    Delta_3c = Delta_3c * 100
 
+   ' Schritt 3: Speicher die Wert in Byte Variablen. Kommastellen fallen Weg
+   Delta_1c_b = Delta_1c
+   Delta_2c_b = Delta_2c
+   Delta_3c_b = Delta_3c
+
+   Enable Interrupts
+
    Print "CH0: " ; W_v_d ; " CH1: " ; 1c_vout ; " CH2: " ; 2c_vout ; " CH3: " ; 3c_vout
    Print "1C: " ; 1c_vin ; " 2C: " ; 2c_vin ; " 3C: " ; 3c_vin
 
-
-Enable Interrupts
 
 
 Waitms 500
@@ -218,19 +213,17 @@ Twi_master_needs_byte:
   'Print "Master needs byte : " ; Twi_btr
   'Print "ADC value: " ; W
 
-  Temp = W       ' only fist 8 bits of w are assigend to temp
-  Temp_word = W       ' all 10 bits of adc value stored in Temp_word
-  Shift Temp_word , Right , 8
-
   If Twi_btr = 1 Then       ' send lower 8 bits of adc value
-    Twi = Temp
+    Twi = Delta_1c_b
    ' Print "Sent lower 8: " ; Twi
     'Twi = 5
   Elseif Twi_btr = 2 Then       'send remaining 2 bits of adc value
-    Twi = Temp_word
+    Twi = Delta_2c_b
    ' Print "Sent upper 2: " ; Twi
     'Twi = 50
     'Print "twi is: " ; Twi
+  Elseif Twi_btr = 3 Then
+    Twi = Delta_2c_b
   Else
     Twi = 0
   End If
