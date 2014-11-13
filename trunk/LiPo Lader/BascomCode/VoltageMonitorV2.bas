@@ -75,7 +75,7 @@ Print "M8 Slave Voltage Monitor V2.1"
 
 Do
 Led = 1       'switch off all LEDS
-Waitms 300       'wait 1 second
+Waitms 500       'wait 1 second
 Led = 0
 
 Disable Interrupts
@@ -126,19 +126,33 @@ Disable Interrupts
    1c_vin = 1c_vin * 55700
 
 
-   ' 2c_vin = (10k + 69.56k) * (2c_vout / 69.56k)
-   2c_vin = 2c_vout / 69560
-   2c_vin = 2c_vin * 79560
+   ' 2c_vin = (10k + 6956) * (2c_vout / 6956)
+   2c_vin = 2c_vout / 6956
+   2c_vin = 2c_vin * 16956
 
 
-   ' 3c_vin = (10k + 37.64k) * (3c_vout / 37.64k)
-   3c_vin = 3c_vout / 37640
-   3c_vin = 3c_vin * 47640
+   ' 3c_vin = (10k + 3764) * (3c_vout / 3764)
+   3c_vin = 3c_vout / 3764
+   3c_vin = 3c_vin * 13764
+
+
+
+   ' Hier addieren wir den offset des grounds zu den berechneten spannungen
+   If W_v_d < 0 Then
+      1c_vin = 1c_vin - W_v_d
+      2c_vin = 2c_vin - W_v_d
+      3c_vin = 3c_vin - W_v_d
+   Else
+      1c_vin = 1c_vin + W_v_d
+      2c_vin = 2c_vin + W_v_d
+      3c_vin = 3c_vin + W_v_d
+   End If
+
 
 
    ' Hier werden die Differenzen zwischen einzelnen Spannungen berechnet
    ' Somit müssen wir nicht alle Spannungen einzelnd zu Master senden
-    Delta_1c = 1c_vin - W_v_d
+    Delta_1c = 1c_vin 
     Delta_2c = 2c_vin - 1c_vin
     Delta_3c = 3c_vin - 2c_vin
 
@@ -164,14 +178,14 @@ Disable Interrupts
 
    Enable Interrupts
 
-   Print "CH0: " ; W_v_d ; " CH1: " ; 1c_vout ; " CH2: " ; 2c_vout ; " CH3: " ; 3c_vout
-   Print "1C: " ; 1c_vin ; " 2C: " ; 2c_vin ; " 3C: " ; 3c_vin
+   Print "CH0 ADC: " ; W_v_d ; " CH1 ADC: " ; 1c_vout ; " CH2 ADC: " ; 2c_vout ; " CH3 ADC: " ; 3c_vout
+   Print "1C Voltage: " ; 1c_vin ; " 2C Voltage: " ; 2c_vin ; " 3C Voltage: " ; 3c_vin
+   Print "Delta1: " ; Delta_1c_b ; " Delta2: " ; Delta_2c_b ; " Delta3: " ; Delta_3c_b
 
 
 
 Waitms 500
 'Print "Toggle PortB.1"
-Waitms 300       'wait 1 second
 
 Loop
                                                            'unconditional loop
@@ -223,7 +237,7 @@ Twi_master_needs_byte:
     'Twi = 50
     'Print "twi is: " ; Twi
   Elseif Twi_btr = 3 Then
-    Twi = Delta_2c_b
+    Twi = Delta_3c_b
   Else
     Twi = 0
   End If
