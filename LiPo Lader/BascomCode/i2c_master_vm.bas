@@ -84,7 +84,6 @@ Do
   ''I2creceive &H70 , X , 0 , 1       ' get 1 byte
   I2cwbyte M8_read
   'I2cwbyte M8_write
-  I2crbyte W , Ack
   I2crbyte X , Ack
   I2crbyte Y , Ack,
   I2crbyte Z , Nack
@@ -99,7 +98,6 @@ Do
 
   '----------------
 
-  Print W ; " " ; Err       ' show error
   Print X ; " " ; Err
   Print Y ; " " ; Err
   Print Z ; " " ; Err

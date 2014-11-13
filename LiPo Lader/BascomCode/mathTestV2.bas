@@ -48,17 +48,26 @@ Do
    W_v_d = W_v_d * 0.997815783
    W_v_d = W_v_d - 1.157429454
 
+   W_v_d = -1.006295559
+
 
    ' Spannungen nach dem Spannungsteiler
-   1c_vout = 1c * 3222656
-   1c_vout = 1c_vout / 1000000000
+   '1c_vout = 1c * 3222656
+   '1c_vout = 1c_vout / 1000000000
 
-   2c_vout = 2c * 3222656
-   2c_vout = 2c_vout / 1000000000
+   1c_vout = 1.907812116
 
-   3c_vout = 3c * 3222656
-   3c_vout = 3c_vout / 1000000000
 
+   '2c_vout = 2c * 3222656
+   '2c_vout = 2c_vout / 1000000000
+
+   2c_vout = 2.320312017
+
+
+   '3c_vout = 3c * 3222656
+   '3c_vout = 3c_vout / 1000000000
+
+   3c_vout = 2.462109086
 
    ' Spannungen vor dem Spannungsteiler
    ' 1c_vin = (10k + 45.7k) * (1c_vout / 45.7k)
@@ -66,20 +75,34 @@ Do
    1c_vin = 1c_vin * 55700
    '1c_vin_long = 1c_vin * 100
 
-   ' 2c_vin = (10k + 69.56k) * (2c_vout / 69.56k)
-   2c_vin = 2c_vout / 69560
-   2c_vin = 2c_vin * 79560
+   ' 2c_vin = (10k + 6956) * (2c_vout / 6956)
+   2c_vin = 2c_vout / 6956
+   2c_vin = 2c_vin * 16956
    '2c_vin_long = 2c_vin * 100
 
-   ' 3c_vin = (10k + 37.64k) * (3c_vout / 37.64k)
-   3c_vin = 3c_vout / 37640
-   3c_vin = 3c_vin * 47640
+   ' 3c_vin = (10k + 3764) * (3c_vout / 3764)
+   3c_vin = 3c_vout / 3764
+   3c_vin = 3c_vin * 13764
    '3c_vin_long = 3c_vin * 100
+
+
+
+   ' Hier addieren wir den offset des grounds zu den berechneten spannungen
+   If W_v_d < 0 Then
+      1c_vin = 1c_vin - W_v_d
+      2c_vin = 2c_vin - W_v_d
+      3c_vin = 3c_vin - W_v_d
+   Else
+      1c_vin = 1c_vin + W_v_d
+      2c_vin = 2c_vin + W_v_d
+      3c_vin = 3c_vin + W_v_d
+   End If
+
 
 
    ' Hier werden die Differenzen zwischen einzelnen Spannungen berechnet
    ' Somit müssen wir nicht alle Spannungen einzelnd zu Master senden
-    Delta_1c = 1c_vin - W_v_d
+    Delta_1c = 1c_vin 
 
     Delta_2c = 2c_vin - 1c_vin
 
@@ -108,7 +131,7 @@ Do
 
    Print "CH0: " ; W_v_d ; " CH1: " ; 1c_vout ; " CH2: " ; 2c_vout ; " CH3: " ; 3c_vout
    Print "1C: " ; 1c_vin ; " 2C: " ; 2c_vin ; " 3C: " ; 3c_vin
-
+   Print "Delta1: " ; Delta_1c_b ; " Delta2: " ; Delta_2c_b ; " Delta3: " ; Delta_3c_b
 
 Loop
                                                            'unconditional loop
