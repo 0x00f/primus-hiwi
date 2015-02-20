@@ -1,17 +1,18 @@
-'************************************************
-'*            L-Ion Voltage Supervisor          *
-'*                 AVR = ATMega8                *
-'*               V1.0 [30.05.2104]              *
-'*           M.Schulze, M.A.Stadtlander         *
-'*        Kompiliert mit BASCOM AVR 2.0.7.7     *
-'*           ZARM Universitaet Bremen           *
-'************************************************
+'*******************************************************************************
+'*                          L-Ion Voltage Supervisor                           *
+'*                              AVR = ATMega8                                  *
+'*                            V2.0 [18.12.2104]                                *
+'*                         M.Schulze, M.A.Stadtlander                          *
+'*                     Kompiliert mit BASCOM AVR 2.0.7.7                       *
+'*                   Benötigt die extra I2C Slave Library                      *
+'*                         ZARM Universitaet Bremen                            *
+'*******************************************************************************
 
 ' Wir benutzen den ATMega8
 $regfile = "m8def.dat"
-' MyAVR Board hat ein 3.6864MHz Crystal
-' Diese Frequenz ermöglich Serielle BAUD Raten mit 0% Fehler
-' Wichtig: Der Mega muss den Ext Osc. Fuse gesetzt haben
+' Nutze den internen 8MHz oszillator
+' Wichtig: Wenn ein externe Oszillator eingesetzt wird muss der Mega8 den
+' Ext Osc. Fuse gesetzt haben
 $crystal = 8000000
 ' Print/RS232 Baud Rate
 $baud = 9600
@@ -32,17 +33,18 @@ Config Adc = Single , Prescaler = Auto , Reference = Avcc
 Start Adc
 
 ' Configure TWI / I2C
-Config Twislave = &H70 , Btr = 2 , Bitrate = 100000 , Gencall = 1
+Config Twislave = &H70 , Btr = 4 , Bitrate = 100000 , Gencall = 1
 ' In i2c the address has 7 bits. The LS bit is used to indicate read or write
 ' When the bit is 0, it means a write and a 1 means a read
-' When you address a slave with the master in bascom, the LS bit will be set/reset automatic.
-' The TWAR register in the AVR is 8 bit with the slave address also in the most left 7 bits
-' This means that when you setup the slave address as &H70, TWAR will be set to &H0111_0000
+' When you address a slave with the master in bascom, the LS bit will be
+' set/reset automatic.
+' The TWAR register in the AVR is 8 bit with the slave address also in the
+' most left 7 bits
+' This means that when you setup the slave address as &H70, TWAR will be set
+' to &H0111_0000
 ' And in the master you address the slave with address &H70 too.
-' The AVR TWI can also recognize the general call address 0. You need to either set bit 0 for example
-' by using &H71 as a slave address, or by using GENCALL=1
-
-
+' The AVR TWI can also recognize the general call address 0. You need to either
+' set bit 0 for example by using &H71 as a slave address, or by using GENCALL=1
 
 ' As you might need other interrupts as well, you need to enable them all manual
 Enable Interrupts
@@ -152,7 +154,7 @@ Disable Interrupts
 
    ' Hier werden die Differenzen zwischen einzelnen Spannungen berechnet
    ' Somit müssen wir nicht alle Spannungen einzelnd zu Master senden
-    Delta_1c = 1c_vin 
+    Delta_1c = 1c_vin
     Delta_2c = 2c_vin - 1c_vin
     Delta_3c = 3c_vin - 2c_vin
 
@@ -176,13 +178,13 @@ Disable Interrupts
    Delta_2c_b = Delta_2c
    Delta_3c_b = Delta_3c
 
+
+
+   'Print "CH0 ADC: " ; W_v_d ; " CH1 ADC: " ; 1c_vout ; " CH2 ADC: " ; 2c_vout ; " CH3 ADC: " ; 3c_vout
+   'Print "1C Voltage: " ; 1c_vin ; " 2C Voltage: " ; 2c_vin ; " 3C Voltage: " ; 3c_vin
+   'Print "Delta1: " ; Delta_1c_b ; " Delta2: " ; Delta_2c_b ; " Delta3: " ; Delta_3c_b
+
    Enable Interrupts
-
-   Print "CH0 ADC: " ; W_v_d ; " CH1 ADC: " ; 1c_vout ; " CH2 ADC: " ; 2c_vout ; " CH3 ADC: " ; 3c_vout
-   Print "1C Voltage: " ; 1c_vin ; " 2C Voltage: " ; 2c_vin ; " 3C Voltage: " ; 3c_vin
-   Print "Delta1: " ; Delta_1c_b ; " Delta2: " ; Delta_2c_b ; " Delta3: " ; Delta_3c_b
-
-
 
 Waitms 500
 'Print "Toggle PortB.1"
@@ -225,19 +227,15 @@ Return
 
 Twi_master_needs_byte:
   'Print "Master needs byte : " ; Twi_btr
-  'Print "ADC value: " ; W
 
   If Twi_btr = 1 Then       ' send lower 8 bits of adc value
     Twi = Delta_1c_b
-   ' Print "Sent lower 8: " ; Twi
-    'Twi = 5
   Elseif Twi_btr = 2 Then       'send remaining 2 bits of adc value
     Twi = Delta_2c_b
-   ' Print "Sent upper 2: " ; Twi
-    'Twi = 50
-    'Print "twi is: " ; Twi
   Elseif Twi_btr = 3 Then
     Twi = Delta_3c_b
+  Elseif Twi_btr = 4 Then
+    Twi = 111
   Else
     Twi = 0
   End If
