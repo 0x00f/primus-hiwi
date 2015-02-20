@@ -62,7 +62,7 @@ Config Twi = 100000       ' wanted clock frequency
  Const M8_read = &H71
 
 
-Dim B As Byte , W As Byte , X As Byte , Y As Byte , Z As Byte
+Dim B As Byte , W As Byte , X As Byte , Y As Byte , Z As Byte , A As Byte
 
 Print "TWI master"
 
@@ -85,8 +85,9 @@ Do
   I2cwbyte M8_read
   'I2cwbyte M8_write
   I2crbyte X , Ack
-  I2crbyte Y , Ack,
-  I2crbyte Z , Nack
+  I2crbyte Y , Ack
+  I2crbyte Z , Ack
+  I2crbyte A, Nack
 
   I2cstop
 
